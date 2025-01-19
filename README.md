@@ -6,6 +6,7 @@
 ### Static
 - [Facebook](https://www.facebook.com/work.julias)
 - [Instagram](https://www.instagram.com/rou_wnffldktm/)
+- [Twitter](https://twitter.com/rou_wnffldktm)
 - [LinkedIn](https://linkedin.com/in/julias-galuhk-immanuel)
 
 ## Statis
