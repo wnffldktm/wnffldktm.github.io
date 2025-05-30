@@ -72,50 +72,27 @@ document.addEventListener('DOMContentLoaded', function () {
     const decos = document.querySelectorAll('.chinese-deco');
 
     decos.forEach(deco => {
-        // Store original styles
-        const originalOpacity = deco.style.opacity;
-        const originalTransform = deco.style.transform;
-        const originalColor = deco.style.color;
-        const originalTextShadow = deco.style.textShadow;
-        const originalZIndex = deco.style.zIndex;
-        const originalAnimation = deco.style.animation;
-
         deco.addEventListener('mouseover', function () {
-            // Apply hover styles
-            this.style.animation = 'none';
-            this.style.transform = 'scale(3) rotate(10deg)';
-            this.style.color = '#ff6b9d';
-            this.style.textShadow = '0 0 15px rgba(255, 107, 157, 0.7)';
-            this.style.opacity = '1';
-            this.style.zIndex = '20';
-
-            // After 2 seconds, fade out
-            setTimeout(() => {
-                this.style.opacity = '0';
-            }, 2000);
+            if (window.matchMedia("(hover: hover)").matches) {
+                // Apply hover styles only on non-touch devices
+                this.style.animation = 'none';
+                this.style.transform = 'scale(3) rotate(10deg)';
+                this.style.color = '#ff6b9d';
+                this.style.textShadow = '0 0 15px rgba(255, 107, 157, 0.7)';
+                this.style.opacity = '1';
+                this.style.zIndex = '20';
+            }
         });
 
         deco.addEventListener('mouseout', function () {
-            // Reset to original styles
-            this.style.animation = originalAnimation || 'float 15s ease-in-out infinite';
-            this.style.transform = originalTransform || '';
-            this.style.color = originalColor || 'rgba(177, 80, 224, 0.5)';
-            this.style.textShadow = originalTextShadow || '2px 2px 4px rgba(0, 0, 0, 0.1)';
-            this.style.opacity = originalOpacity || '0.7';
-            this.style.zIndex = originalZIndex || '5';
-        });
-
-        deco.addEventListener('transitionend', function (e) {
-            if (e.propertyName === 'opacity' && this.style.opacity === '0') {
-                // Reset after fade out completes
-                setTimeout(() => {
-                    this.style.animation = originalAnimation || 'float 15s ease-in-out infinite';
-                    this.style.opacity = originalOpacity || '0.7';
-                    this.style.transform = originalTransform || '';
-                    this.style.color = originalColor || 'rgba(177, 80, 224, 0.5)';
-                    this.style.textShadow = originalTextShadow || '2px 2px 4px rgba(0, 0, 0, 0.1)';
-                    this.style.zIndex = originalZIndex || '5';
-                }, 1000);
+            if (window.matchMedia("(hover: hover)").matches) {
+                // Reset to original styles
+                this.style.animation = '';
+                this.style.transform = '';
+                this.style.color = '';
+                this.style.textShadow = '';
+                this.style.opacity = '';
+                this.style.zIndex = '';
             }
         });
     });
