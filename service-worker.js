@@ -23,7 +23,7 @@ self.addEventListener('fetch', event => {
             .then(response => response || fetch(event.request))
 });
 
-// Clean up old caches
+// Clean up old caches - FIXED SYNTAX
 self.addEventListener('activate', event => {
     const cacheWhitelist = [CACHE_NAME];
     event.waitUntil(

@@ -77,14 +77,6 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(el);
     });
 
-    // Add at the bottom of DOMContentLoaded
-    if('serviceWorker' in navigator) {
-        // Cache gallery images
-        document.querySelectorAll('.gallery-item img').forEach(img => {
-            caches.open(CACHE_NAME).then(cache => cache.add(img.src));
-        });
-    }
-
     // Make external links open in new tab
     document.querySelectorAll('a').forEach(link => {
         if (link.hostname !== window.location.hostname) {
