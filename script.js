@@ -60,53 +60,37 @@ if (contactForm) {
     });
 }
 
-// Initialize animations and other features
-document.addEventListener('DOMContentLoaded', function () {
-    const elements = document.querySelectorAll('.fade-in');
-    elements.forEach(el => {
-        el.style.opacity = '0'; // Reset for re-triggering
+// Improved animation observer
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+        }
+    });
+}, { threshold: 0.1 });
+
+// Chinese decorations hover effect (class toggle)
+const decos = document.querySelectorAll('.chinese-deco');
+decos.forEach(deco => {
+    deco.addEventListener('mouseover', function() {
+        if (window.matchMedia("(hover: hover)").matches) {
+            this.classList.add('chinese-deco--hovered');
+        }
     });
 
-    // Improved animation observer with re-triggering support
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.animation = 'fadeIn 0.8s ease forwards';
-            } else {
-                // Reset when leaving viewport for re-triggering
-                entry.target.style.opacity = '0';
-                entry.target.style.animation = 'none';
-            }
-        });
-    }, { threshold: 0.1 });
+    deco.addEventListener('mouseout', function() {
+        if (window.matchMedia("(hover: hover)").matches) {
+            this.classList.remove('chinese-deco--hovered');
+        }
+    });
+});
 
-    elements.forEach(el => observer.observe(el));
-
-    // Enhanced hover effect for Chinese decorations
-    const decos = document.querySelectorAll('.chinese-deco');
-    decos.forEach(deco => {
-        deco.addEventListener('mouseover', function () {
-            if (window.matchMedia("(hover: hover)").matches) {
-                this.style.animation = 'none';
-                this.style.transform = 'scale(3) rotate(10deg)';
-                this.style.color = '#ff6b9d';
-                this.style.textShadow = '0 0 15px rgba(255, 107, 157, 0.7)';
-                this.style.opacity = '1';
-                this.style.zIndex = '20';
-            }
-        });
-
-        deco.addEventListener('mouseout', function () {
-            if (window.matchMedia("(hover: hover)").matches) {
-                this.style.animation = '';
-                this.style.transform = '';
-                this.style.color = '';
-                this.style.textShadow = '';
-                this.style.opacity = '';
-                this.style.zIndex = '';
-            }
-        });
+// Initialize animations and other features
+document.addEventListener('DOMContentLoaded', function () {
+    // Initialize fade-in animations
+    const elements = document.querySelectorAll('.fade-in');
+    elements.forEach(el => {
+        observer.observe(el);
     });
 
     // Make external links open in new tab
