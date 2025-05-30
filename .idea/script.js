@@ -120,3 +120,53 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+// Make external links open in new tab
+document.addEventListener('DOMContentLoaded', function() {
+    const allLinks = document.querySelectorAll('a');
+
+    allLinks.forEach(link => {
+        // Check if it's an external link
+        if (link.hostname !== window.location.hostname) {
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+        }
+    });
+});
+// Navigation functionality
+const navDots = document.querySelectorAll('.nav-dot');
+const sections = document.querySelectorAll('section');
+
+// Scroll event to update active dot
+window.addEventListener('scroll', function () {
+    // ... existing scroll code ...
+});
+
+// Dot click event
+navDots.forEach(dot => {
+    // ... existing dot click code ...
+});
+
+// Form submission
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+    // ... existing form code ...
+});
+
+// Initialize animations and other features
+document.addEventListener('DOMContentLoaded', function () {
+    // ... existing animation code ...
+
+    // Enhanced hover effect for Chinese decorations
+    const decos = document.querySelectorAll('.chinese-deco');
+    // ... existing decoration code ...
+
+    // Make external links open in new tab
+    const allLinks = document.querySelectorAll('a');
+
+    allLinks.forEach(link => {
+        // Check if it's an external link
+        if (link.hostname !== window.location.hostname) {
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+        }
+    });
+});
