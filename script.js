@@ -69,22 +69,6 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.1 });
 
-// Chinese decorations hover effect (class toggle)
-const decos = document.querySelectorAll('.chinese-deco');
-decos.forEach(deco => {
-    deco.addEventListener('mouseover', function() {
-        if (window.matchMedia("(hover: hover)").matches) {
-            this.classList.add('chinese-deco--hovered');
-        }
-    });
-
-    deco.addEventListener('mouseout', function() {
-        if (window.matchMedia("(hover: hover)").matches) {
-            this.classList.remove('chinese-deco--hovered');
-        }
-    });
-});
-
 // Initialize animations and other features
 document.addEventListener('DOMContentLoaded', function () {
     // Initialize fade-in animations
@@ -99,5 +83,33 @@ document.addEventListener('DOMContentLoaded', function () {
             link.target = '_blank';
             link.rel = 'noopener noreferrer';
         }
+    });
+
+    // Chinese decorations hover effect with animation control
+    const decos = document.querySelectorAll('.chinese-deco');
+    decos.forEach(deco => {
+        // Set initial float animation
+        deco.style.animation = 'float 15s ease-in-out infinite';
+
+        deco.addEventListener('mouseover', function() {
+            if (window.matchMedia("(hover: hover)").matches) {
+                this.classList.add('chinese-deco--hovered');
+                // Cancel any ongoing animations
+                this.style.animation = 'none';
+            }
+        });
+
+        deco.addEventListener('mouseout', function() {
+            if (window.matchMedia("(hover: hover)").matches) {
+                this.classList.remove('chinese-deco--hovered');
+                // Apply smooth return animation
+                this.style.animation = 'floatReturn 0.8s cubic-bezier(0.2, 0.8, 0.4, 1) forwards';
+
+                // Restart float animation after return completes
+                setTimeout(() => {
+                    this.style.animation = 'float 15s ease-in-out infinite';
+                }, 800);
+            }
+        });
     });
 });

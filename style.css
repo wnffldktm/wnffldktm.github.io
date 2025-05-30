@@ -37,16 +37,24 @@ body {
     pointer-events: auto;
     opacity: 0.7;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    transition: all 0.5s ease;
+    /* Modified transition with custom easing and origin */
+    transition: all 0.8s cubic-bezier(0.2, 0.8, 0.4, 1) !important;
+    transform-origin: center;
 }
 
-.chinese-deco.chinese-deco--hovered {
-    animation: none;
-    transform: scale(3) rotate(10deg);
-    opacity: 1;
-    z-index: 20;
-    color: #ff6b9d;
-    text-shadow: 0 0 15px rgba(255, 107, 157, 0.7);
+/* Modified hover state transition */
+.chinese-deco.chinese-deco--hovered
+@media (hover: hover) {
+    .chinese-deco:hover {
+        animation: none !important;
+        transform: scale(3) rotate(10deg);
+        opacity: 1;
+        z-index: 20;
+        color: #ff6b9d;
+        text-shadow: 0 0 15px rgba(255, 107, 157, 0.7);
+        /* Added specific transition for hover state */
+        transition: all 0.6s cubic-bezier(0.2, 0.8, 0.4, 1) !important;
+    }
 }
 
 @media (hover: hover) {
@@ -707,6 +715,26 @@ footer {
     100% {
         transform: translateY(0px) rotate(0deg);
     }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Added new return animation */
+@keyframes floatReturn {
+    0% {
+        transform: scale(3) rotate(10deg);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+@keyframes floatReturn {
+    0% { transform: translateY(var(--current-pos)); }
+    100% { transform: translateY(0); }
 }
 
 /* Added gallery layout without !important */
