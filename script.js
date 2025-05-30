@@ -88,25 +88,31 @@ document.addEventListener('DOMContentLoaded', function () {
     // Chinese decorations hover effect with animation control
     const decos = document.querySelectorAll('.chinese-deco');
     decos.forEach(deco => {
-        // Set initial float animation
-        deco.style.animation = 'float 15s ease-in-out infinite';
+        let returnTimeout;
 
         deco.addEventListener('mouseover', function() {
             if (window.matchMedia("(hover: hover)").matches) {
-                this.classList.add('chinese-deco--hovered');
-                // Cancel any ongoing animations
+                // Clear any pending timeouts
+                clearTimeout(returnTimeout);
+
+                // Capture current position
+                const style = window.getComputedStyle(this);
+                const matrix = new DOMMatrixReadOnly(style.transform);
+                this.style.setProperty('--currentX', matrix.m41 + 'px');
+                this.style.setProperty('--currentY', matrix.m42 + 'px');
+
+                // Cancel float animation
                 this.style.animation = 'none';
             }
         });
 
         deco.addEventListener('mouseout', function() {
             if (window.matchMedia("(hover: hover)").matches) {
-                this.classList.remove('chinese-deco--hovered');
-                // Apply smooth return animation
-                this.style.animation = 'floatReturn 0.8s cubic-bezier(0.2, 0.8, 0.4, 1) forwards';
+                // Apply return animation
+                this.style.animation = 'returnToOrigin 0.8s forwards';
 
                 // Restart float animation after return completes
-                setTimeout(() => {
+                returnTimeout = setTimeout(() => {
                     this.style.animation = 'float 15s ease-in-out infinite';
                 }, 800);
             }
