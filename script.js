@@ -67,7 +67,7 @@ const observer = new IntersectionObserver((entries) => {
             entry.target.classList.add('is-visible');
         }
     });
-}, { threshold: 0.1 });
+}, {threshold: 0.1});
 
 // Initialize animations and other features
 document.addEventListener('DOMContentLoaded', function () {
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
     decos.forEach(deco => {
         let returnTimeout;
 
-        deco.addEventListener('mouseover', function() {
+        deco.addEventListener('mouseover', function () {
             if (window.matchMedia("(hover: hover)").matches) {
                 // Clear any pending timeouts
                 clearTimeout(returnTimeout);
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        deco.addEventListener('mouseout', function() {
+        deco.addEventListener('mouseout', function () {
             if (window.matchMedia("(hover: hover)").matches) {
                 // Apply return animation
                 this.style.animation = 'returnToOrigin 0.8s forwards';
@@ -121,14 +121,14 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Video Gallery Script
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Video modal functionality
     const videoModal = document.getElementById('videoModal');
     const videoFrame = document.getElementById('videoFrame');
     const closeBtn = document.querySelector('.close-btn');
 
     document.querySelectorAll('.video-item').forEach(item => {
-        item.addEventListener('click', function() {
+        item.addEventListener('click', function () {
             const videoUrl = this.getAttribute('data-video') + '?autoplay=1';
             videoFrame.src = videoUrl;
             videoModal.style.display = 'flex';
@@ -137,14 +137,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Close modal
-    closeBtn.addEventListener('click', function() {
+    closeBtn.addEventListener('click', function () {
         videoModal.style.display = 'none';
         videoFrame.src = '';
         document.body.style.overflow = 'auto';
     });
 
     // Close when clicking outside modal
-    window.addEventListener('click', function(e) {
+    window.addEventListener('click', function (e) {
         if (e.target === videoModal) {
             videoModal.style.display = 'none';
             videoFrame.src = '';
