@@ -119,3 +119,36 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+// Video Gallery Script
+document.addEventListener('DOMContentLoaded', function() {
+    // Video modal functionality
+    const videoModal = document.getElementById('videoModal');
+    const videoFrame = document.getElementById('videoFrame');
+    const closeBtn = document.querySelector('.close-btn');
+
+    document.querySelectorAll('.video-item').forEach(item => {
+        item.addEventListener('click', function() {
+            const videoUrl = this.getAttribute('data-video') + '?autoplay=1';
+            videoFrame.src = videoUrl;
+            videoModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // Close modal
+    closeBtn.addEventListener('click', function() {
+        videoModal.style.display = 'none';
+        videoFrame.src = '';
+        document.body.style.overflow = 'auto';
+    });
+
+    // Close when clicking outside modal
+    window.addEventListener('click', function(e) {
+        if (e.target === videoModal) {
+            videoModal.style.display = 'none';
+            videoFrame.src = '';
+            document.body.style.overflow = 'auto';
+        }
+    });
+});
