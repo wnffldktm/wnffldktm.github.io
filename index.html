@@ -8,6 +8,31 @@
     <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUITE@2/fonts/variable/woff2/SUITE-Variable.css"
           rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+    <!-- Add this before your style.css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6a5acd',
+                        secondary: '#ffb6c1',
+                        accent: '#98d8c8',
+                        accent2: '#f0e68c',
+                        text: '#5a4a6a',
+                        lightText: '#888',
+                        cardBg: '#fff9fd',
+                        sectionBg: '#f8f0ff',
+                        highlight: '#b19cd9',
+                        shadow: 'rgba(177, 156, 217, 0.1)',
+                    },
+                    fontFamily: {
+                        suite: ['SUITE Variable', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 <body>
 <div class="chinese-deco">奥</div>
