@@ -2,365 +2,331 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Akko - Anime Illustrator</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUITE@2/fonts/variable/woff2/SUITE-Variable.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#6a5acd',
-                        secondary: '#ffb6c1',
-                        accent: '#98d8c8',
-                        accent2: '#f0e68c',
-                        text: '#5a4a6a',
-                        lightText: '#888',
-                        cardBg: '#fff9fd',
-                        sectionBg: '#f8f0ff',
-                        highlight: '#b19cd9',
-                        shadow: 'rgba(177, 156, 217, 0.1)',
-                    },
-                    fontFamily: {
-                        suite: ['SUITE Variable', 'sans-serif'],
-                        poppins: ['Poppins', 'sans-serif']
-                    },
-                    animation: {
-                        float: 'float 15s ease-in-out infinite',
-                        fadeIn: 'fadeIn 0.8s ease forwards',
-                        returnToOrigin: 'returnToOrigin 0.8s forwards'
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        },
-                        fadeIn: {
-                            from: { opacity: '0', transform: 'translateY(20px)' },
-                            to: { opacity: '1', transform: 'translateY(0)' },
-                        },
-                        returnToOrigin: {
-                            '0%': { transform: 'translate(var(--tw-translate-x), var(--tw-translate-y))' },
-                            '100%': { transform: 'translate(0, 0)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <link href="styles.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUITE@2/fonts/variable/woff2/SUITE-Variable.css"
+          rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
-<body class="font-suite bg-cardBg text-text overflow-x-hidden relative">
-<!-- Chinese Decorations -->
-<div class="fixed z-50 text-[3rem] font-bold opacity-70 text-[#b150e0] text-shadow-[2px_2px_4px_rgba(0,0,0,0.1)] will-change-transform animate-float" style="top:15%;left:5%;animation-delay:0s">奥</div>
-<div class="fixed z-50 text-[3rem] font-bold opacity-70 text-[#b150e0] text-shadow-[2px_2px_4px_rgba(0,0,0,0.1)] will-change-transform animate-float" style="top:25%;right:10%;animation-delay:3s">利</div>
-<div class="fixed z-50 text-[3rem] font-bold opacity-70 text-[#b150e0] text-shadow-[2px_2px_4px_rgba(0,0,0,0.1)] will-change-transform animate-float" style="bottom:20%;left:15%;animation-delay:6s">给</div>
-<div class="fixed z-50 text-[3rem] font-bold opacity-70 text-[#b150e0] text-shadow-[2px_2px_4px_rgba(0,0,0,0.1)] will-change-transform animate-float" style="bottom:10%;right:5%;animation-delay:9s">加</div>
-<div class="fixed z-50 text-[3rem] font-bold opacity-70 text-[#b150e0] text-shadow-[2px_2px_4px_rgba(0,0,0,0.1)] will-change-transform animate-float" style="top:50%;left:50%;animation-delay:12s">油</div>
+<body>
+<div class="chinese-deco">奥</div>
+<div class="chinese-deco">利</div>
+<div class="chinese-deco">给</div>
+<div class="chinese-deco">加</div>
+<div class="chinese-deco">油</div>
 
-<!-- Navigation Dots -->
-<div class="fixed top-8 right-8 z-[1000] flex gap-4 opacity-0 transition-opacity duration-400">
-    <div class="nav-dot w-2.5 h-2.5 rounded-full bg-black/10 cursor-pointer transition-all duration-300 active" data-section="home"></div>
-    <div class="nav-dot w-2.5 h-2.5 rounded-full bg-black/10 cursor-pointer transition-all duration-300" data-section="projects-writing"></div>
-    <div class="nav-dot w-2.5 h-2.5 rounded-full bg-black/10 cursor-pointer transition-all duration-300" data-section="gallery"></div>
-    <div class="nav-dot w-2.5 h-2.5 rounded-full bg-black/10 cursor-pointer transition-all duration-300" data-section="contact"></div>
+<div class="nav-container">
+    <div class="nav-dot active" data-section="home"></div>
+    <div class="nav-dot" data-section="projects-writing"></div>
+    <div class="nav-dot" data-section="gallery"></div>
+    <div class="nav-dot" data-section="contact"></div>
 </div>
 
-<!-- Home Section -->
-<section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-primary to-highlight text-white py-20 px-4 md:px-10">
-    <div class="container max-w-[1200px] mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div class="z-10">
-                <h1 class="fade-in delay-1 text-5xl md:text-6xl font-poppins font-bold mb-4 text-white text-shadow-[3px_3px_0_#b19cd9] relative inline-block">
-                    AKKO
-                    <span class="absolute bottom-[-10px] left-0 w-[100px] h-1 bg-accent"></span>
-                </h1>
-                <p class="fade-in delay-2 text-xl md:text-2xl mb-8 text-white/90 tracking-wide">Anime-Inspired Illustrator & Designer</p>
+<section id="home">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="logo fade-in delay-1">AKKO</h1>
+                <p class="tagline fade-in delay-2">Anime-Inspired Illustrator & Designer</p>
 
-                <div class="fade-in delay-3 bg-white/20 backdrop-blur-lg rounded-2xl p-6 md:p-10 mt-10 text-left border border-white/30 shadow-lg shadow-highlight/10">
-                    <h2 class="text-2xl font-poppins mb-6 text-white">Pastel Art Specialist</h2>
-                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                        <div class="lg:col-span-2 text-white/90 leading-relaxed">
-                            <p class="mb-4">Illustrator with 6+ years of experience creating anime-inspired artwork and pastel designs. Specializing in dreamy color palettes and expressive characters, with a proven track record of delivering beautiful, high-quality work.</p>
-                            <p>Excellent communication skills and ability to collaborate effectively with creative teams to achieve stunning visual aesthetics. My work blends traditional anime styles with modern Chinese animation influences to create unique visual experiences.</p>
+                <div class="about-card fade-in delay-3">
+                    <h2 class="about-title">Pastel Art Specialist</h2>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <p>Illustrator with 6+ years of experience creating anime-inspired artwork and pastel
+                                designs. Specializing in dreamy color palettes and expressive characters, with a proven
+                                track record of delivering beautiful, high-quality work.</p>
+                            <p>Excellent communication skills and ability to collaborate effectively with creative teams
+                                to achieve stunning visual aesthetics. My work blends traditional anime styles with
+                                modern
+                                Chinese animation influences to create unique visual experiences.</p>
                         </div>
-                        <div>
-                            <h3 class="text-xl mb-4 text-white">Skills</h3>
-                            <ul class="space-y-2 mb-6">
-                                <li class="flex items-center"><span class="text-accent mr-2 text-xl">•</span> Character Illustration</li>
-                                <li class="flex items-center"><span class="text-accent mr-2 text-xl">•</span> Anime Art Style</li>
-                                <li class="flex items-center"><span class="text-accent mr-2 text-xl">•</span> Color Theory</li>
-                                <li class="flex items-center"><span class="text-accent mr-2 text-xl">•</span> Digital Painting</li>
-                                <li class="flex items-center"><span class="text-accent mr-2 text-xl">•</span> Visual Storytelling</li>
+                        <div class="skills-section">
+                            <h3>Skills</h3>
+                            <ul class="skills-list">
+                                <li>Character Illustration</li>
+                                <li>Anime Art Style</li>
+                                <li>Color Theory</li>
+                                <li>Digital Painting</li>
+                                <li>Visual Storytelling</li>
                             </ul>
 
-                            <div class="bg-white/15 p-5 rounded-xl mt-6">
-                                <h4 class="text-lg mb-2 text-white">Soft Skills</h4>
-                                <p class="text-white/80">Creativity • Attention to Detail • Empathy • Self-motivation</p>
+                            <div class="soft-skills">
+                                <h4>Soft Skills</h4>
+                                <p>Creativity • Attention to Detail • Empathy • Self-motivation</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="relative z-10 text-center">
-                <img class="w-full max-w-[400px] mx-auto rounded-2xl shadow-xl border-[5px] border-white/20 animate-float"
-                     alt="Akko Profile"
+            <div class="hero-image">
+                <img alt="Akko Profile"
                      src="https://raw.githubusercontent.com/wnffldktm/wnffldktm.github.io/refs/heads/main/Assets/Hanroro.png">
             </div>
         </div>
     </div>
 </section>
 
-<!-- Projects & Writing Section -->
-<section id="projects-writing" class="py-20 px-4 md:px-10 bg-sectionBg">
-    <div class="container max-w-[1200px] mx-auto">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-poppins text-primary relative inline-block mb-4">
-                My Work
-                <span class="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 w-20 h-1 bg-accent"></span>
-            </h2>
-            <p class="text-lightText">Projects and writings that showcase my anime-inspired style</p>
+<section id="projects-writing">
+    <div class="container">
+        <div class="section-header">
+            <h2>My Work</h2>
+            <p>Projects and writings that showcase my anime-inspired style</p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-10">
-            <!-- Projects Column -->
-            <div class="fade-in bg-cardBg rounded-2xl p-8 shadow-lg border-2 border-secondary">
-                <h3 class="text-2xl font-poppins text-primary mb-6 pb-4 relative">
-                    Projects
-                    <span class="absolute bottom-0 left-0 w-12 h-1 bg-accent"></span>
-                </h3>
+        <div class="dual-column">
+            <div class="projects-column fade-in">
+                <h3 class="column-title">Projects</h3>
 
-                <div class="space-y-8">
-                    <div class="pb-6 border-b border-black/5">
-                        <h4 class="text-xl flex items-center mb-3 text-text"><i class="fas fa-paint-brush text-primary mr-3"></i> Anime Character Series</h4>
-                        <p class="text-lightText mb-4">A collection of original anime characters with unique personalities and backstories. Each character features intricate costume designs and expressive poses that capture their individual stories.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm border border-primary/20">Character Design</span>
-                            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm border border-primary/20">Illustration</span>
-                            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm border border-primary/20">Concept Art</span>
-                        </div>
+                <div class="project-item">
+                    <h4 class="project-title"><i class="fas fa-paint-brush"></i> Anime Character Series</h4>
+                    <p class="project-description">A collection of original anime characters with unique personalities
+                        and backstories. Each character features intricate costume designs and expressive poses that
+                        capture their individual stories.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Character Design</span>
+                        <span class="project-tag">Illustration</span>
+                        <span class="project-tag">Concept Art</span>
                     </div>
+                </div>
 
-                    <div class="pb-6 border-b border-black/5">
-                        <h4 class="text-xl flex items-center mb-3 text-text"><i class="fas fa-terminal text-primary mr-3"></i> Donghua-Inspired Artbook</h4>
-                        <p class="text-lightText mb-4">A beautifully illustrated artbook featuring pastel anime-style artwork inspired by Chinese animation. This 120-page collection showcases my signature dreamy aesthetic.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm border border-primary/20">Artbook</span>
-                            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm border border-primary/20">Print</span>
-                            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm border border-primary/20">Layout</span>
-                        </div>
+                <div class="project-item">
+                    <h4 class="project-title"><i class="fas fa-terminal"></i> Donghua-Inspired Artbook</h4>
+                    <p class="project-description">A beautifully illustrated artbook featuring pastel anime-style
+                        artwork inspired by Chinese animation. This 120-page collection showcases my signature dreamy
+                        aesthetic.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Artbook</span>
+                        <span class="project-tag">Print</span>
+                        <span class="project-tag">Layout</span>
                     </div>
+                </div>
 
-                    <div class="pb-6 border-b border-black/5">
-                        <h4 class="text-xl flex items-center mb-3 text-text"><i class="fas fa-cogs text-primary mr-3"></i> Anime Merchandise Line</h4>
-                        <p class="text-lightText mb-4">A complete merchandise collection featuring original anime character designs. Includes apparel, stationery, and collectibles with my signature pastel color schemes.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm border border-primary/20">Merchandise</span>
-                            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm border border-primary/20">Product Design</span>
-                            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm border border-primary/20">Branding</span>
-                        </div>
+                <div class="project-item">
+                    <h4 class="project-title"><i class="fas fa-cogs"></i> Anime Merchandise Line</h4>
+                    <p class="project-description">A complete merchandise collection featuring original anime character
+                        designs. Includes apparel, stationery, and collectibles with my signature pastel color
+                        schemes.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Merchandise</span>
+                        <span class="project-tag">Product Design</span>
+                        <span class="project-tag">Branding</span>
                     </div>
+                </div>
 
-                    <div>
-                        <h4 class="text-xl flex items-center mb-3 text-text"><i class="fas fa-file-alt text-primary mr-3"></i> Visual Novel Art</h4>
-                        <p class="text-lightText mb-4">Character designs and backgrounds for an upcoming visual novel game. Created expressive anime characters with unique personalities and detailed fantasy environments.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm border border-primary/20">Game Art</span>
-                            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm border border-primary/20">Concept Art</span>
-                            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm border border-primary/20">UI Design</span>
-                        </div>
+                <div class="project-item">
+                    <h4 class="project-title"><i class="fas fa-file-alt"></i> Visual Novel Art</h4>
+                    <p class="project-description">Character designs and backgrounds for an upcoming visual novel game.
+                        Created expressive anime characters with unique personalities and detailed fantasy
+                        environments.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Game Art</span>
+                        <span class="project-tag">Concept Art</span>
+                        <span class="project-tag">UI Design</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Writing Column -->
-            <div class="fade-in delay-1 bg-cardBg rounded-2xl p-8 shadow-lg border-2 border-secondary">
-                <h3 class="text-2xl font-poppins text-primary mb-6 pb-4 relative">
-                    Writing
-                    <span class="absolute bottom-0 left-0 w-12 h-1 bg-accent"></span>
-                </h3>
+            <div class="writing-column fade-in delay-1">
+                <h3 class="column-title">Writing</h3>
 
-                <div class="space-y-6">
-                    <div class="pb-6 border-b border-black/5">
-                        <h4 class="text-xl mb-2 text-text">Creating Expressive Anime Characters</h4>
-                        <div class="text-lightText text-sm mb-3">December 2023 • 8 min read</div>
-                        <p>Techniques for designing anime characters with unique personalities that resonate with audiences.</p>
-                    </div>
+                <div class="writing-item">
+                    <h4 class="writing-title">Creating Expressive Anime Characters</h4>
+                    <div class="writing-meta">December 2023 • 8 min read</div>
+                    <p>Techniques for designing anime characters with unique personalities that resonate with
+                        audiences.</p>
+                </div>
 
-                    <div class="pb-6 border-b border-black/5">
-                        <h4 class="text-xl mb-2 text-text">Pastel Color Palettes in Anime</h4>
-                        <div class="text-lightText text-sm mb-3">April 2023 • 6 min read</div>
-                        <p>How to use soft colors to create dreamy anime aesthetics that evoke emotion and atmosphere.</p>
-                    </div>
+                <div class="writing-item">
+                    <h4 class="writing-title">Pastel Color Palettes in Anime</h4>
+                    <div class="writing-meta">April 2023 • 6 min read</div>
+                    <p>How to use soft colors to create dreamy anime aesthetics that evoke emotion and atmosphere.</p>
+                </div>
 
-                    <div class="pb-6 border-b border-black/5">
-                        <h4 class="text-xl mb-2 text-text">The Art of Donghua</h4>
-                        <div class="text-lightText text-sm mb-3">March 2023 • 10 min read</div>
-                        <p>Exploring the unique visual style of Chinese animation and its influence on modern anime.</p>
-                        <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm inline-block mt-2 border border-secondary/20">Art Review</span>
-                    </div>
+                <div class="writing-item">
+                    <h4 class="writing-title">The Art of Donghua</h4>
+                    <div class="writing-meta">March 2023 • 10 min read</div>
+                    <p>Exploring the unique visual style of Chinese animation and its influence on modern anime.</p>
+                    <span class="writing-publisher">Art Review</span>
+                </div>
 
-                    <div>
-                        <h4 class="text-xl mb-2 text-text">From Sketch to Final Illustration</h4>
-                        <div class="text-lightText text-sm mb-3">February 2023 • 7 min read</div>
-                        <p>My process for creating polished anime-style artwork, from initial concept to finished piece.</p>
-                        <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm inline-block mt-2 border border-secondary/20">Creative Process</span>
-                    </div>
+                <div class="writing-item">
+                    <h4 class="writing-title">From Sketch to Final Illustration</h4>
+                    <div class="writing-meta">February 2023 • 7 min read</div>
+                    <p>My process for creating polished anime-style artwork, from initial concept to finished piece.</p>
+                    <span class="writing-publisher">Creative Process</span>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Gallery Section -->
-<section id="gallery" class="py-20 px-4 md:px-10 bg-primary">
-    <div class="max-w-[1200px] mx-auto">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-poppins text-white relative inline-block mb-4">
-                Anime Gallery
-                <span class="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 w-20 h-1 bg-accent"></span>
-            </h2>
-            <p class="text-white/90">My latest anime-inspired creations</p>
+<section id="gallery">
+    <div class="gallery-container">
+        <div class="section-header">
+            <h2 style="color: white;">Anime Gallery</h2>
+            <p style="color: rgba(255,255,255,0.9);">My latest anime-inspired creations</p>
         </div>
 
-        <div class="gallery-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 auto-rows-[200px] mt-10">
-            <!-- Gallery items with Tailwind classes -->
-            <div class="gallery-item fade-in relative rounded-xl overflow-hidden shadow-md cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                <img class="w-full h-full object-cover transition-transform duration-500"
-                     alt="Anime Character"
+        <div class="gallery-grid">
+            <div class="gallery-item fade-in">
+                <img alt="Anime Character"
                      src="https://raw.githubusercontent.com/wnffldktm/wnffldktm.github.io/refs/heads/main/Assets/Hanroro.png">
-                <div class="gallery-overlay absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-5 text-white transform translate-y-full transition-transform duration-400">
-                    <div class="gallery-title text-xl font-poppins mb-1">DREAMY CHARACTER</div>
-                    <div class="gallery-category text-sm opacity-80">Character Design</div>
+                <div class="gallery-overlay">
+                    <div class="gallery-title">DREAMY CHARACTER</div>
+                    <div class="gallery-category">Character Design</div>
                 </div>
             </div>
 
-            <!-- Video item -->
-            <div class="gallery-item fade-in delay-2 video-item relative rounded-xl overflow-hidden shadow-md cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+            <div class="gallery-item fade-in delay-2 video-item"
                  data-title="ANIME VIDEO"
                  data-video="https://www.youtube.com/embed/VIDEO_ID_HERE">
-                <img class="w-full h-full object-cover transition-transform duration-500"
-                     alt="Anime Video"
+                <img alt="Anime Video"
                      src="https://raw.githubusercontent.com/wnffldktm/wnffldktm.github.io/refs/heads/main/Assets/Hanroro.png">
-                <div class="gallery-overlay absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-5 text-white transform translate-y-full transition-transform duration-400">
-                    <div class="gallery-title text-xl font-poppins mb-1">ANIME VIDEO</div>
-                    <div class="gallery-category text-sm opacity-80">Video</div>
+                <div class="gallery-overlay">
+                    <div class="gallery-title">ANIME VIDEO</div>
+                    <div class="gallery-category">Video</div>
                 </div>
-                <div class="video-play-icon absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-14 h-14 bg-white/80 rounded-full flex items-center justify-center text-primary text-xl opacity-0 transition-all duration-300 z-20">
+                <div class="video-play-icon">
                     <i class="fas fa-play"></i>
                 </div>
             </div>
 
-            <!-- Other gallery items -->
-            <!-- ... (similar structure for other items) -->
+            <div class="gallery-item fade-in delay-1">
+                <img alt="Anime Scene"
+                     src="https://raw.githubusercontent.com/wnffldktm/wnffldktm.github.io/refs/heads/main/Assets/Hanroro.png">
+                <div class="gallery-overlay">
+                    <div class="gallery-title">MAGICAL SCENE</div>
+                    <div class="gallery-category">Illustration</div>
+                </div>
+            </div>
+
+            <div class="gallery-item fade-in delay-2">
+                <img alt="Anime Portrait"
+                     src="https://raw.githubusercontent.com/wnffldktm/wnffldktm.github.io/refs/heads/main/Assets/Hanroro.png">
+                <div class="gallery-overlay">
+                    <div class="gallery-title">PORTRAIT STUDY</div>
+                    <div class="gallery-category">Digital Painting</div>
+                </div>
+            </div>
+
+            <div class="gallery-item fade-in delay-2 video-item"
+                 data-title="ANIME VIDEO"
+                 data-video="https://www.youtube.com/embed/E289e2grF5I?si=p1h7ljFikoawrKbY">
+                <img alt="Anime Video"
+                     src="https://raw.githubusercontent.com/wnffldktm/wnffldktm.github.io/refs/heads/main/Assets/Hanroro.png">
+                <div class="gallery-overlay">
+                    <div class="gallery-title">HANRORO</div>
+                    <div class="gallery-category">[Live Session] HANRORO 2025 Spring Edition</div>
+                </div>
+                <div class="video-play-icon">
+                    <i class="fas fa-play"></i>
+                </div>
+            </div>
+
+            <div class="gallery-item fade-in delay-1">
+                <img alt="Anime Fantasy"
+                     src="https://raw.githubusercontent.com/wnffldktm/wnffldktm.github.io/refs/heads/main/Assets/Hanroro.png">
+                <div class="gallery-overlay">
+                    <div class="gallery-title">FANTASY WORLD</div>
+                    <div class="gallery-category">Environment Art</div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- Contact Section -->
-<section id="contact" class="min-h-screen flex items-center bg-gradient-to-br from-primary to-highlight text-white py-20 px-4 md:px-10">
-    <div class="container max-w-[1200px] mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div class="fade-in pr-0 lg:pr-8">
-                <h2 class="text-3xl md:text-4xl font-poppins mb-8 pb-4 relative">
-                    Get In Touch
-                    <span class="absolute bottom-0 left-0 w-20 h-1 bg-accent"></span>
-                </h2>
-                <p class="text-lg mb-10 text-white/90 leading-relaxed">Have an anime-inspired project in mind or want to discuss potential opportunities? I'd love to hear from you! Feel free to reach out using the contact form or through any of the channels below.</p>
+<section id="contact">
+    <div class="container">
+        <div class="contact-container">
+            <div class="contact-info fade-in">
+                <h2 class="contact-title">Get In Touch</h2>
+                <p class="contact-text">Have an anime-inspired project in mind or want to discuss potential
+                    opportunities? I'd love to hear from you! Feel free to reach out using the contact form or through
+                    any of the channels below.</p>
 
-                <div class="space-y-6">
-                    <div class="flex items-center gap-5">
-                        <div class="w-14 h-14 bg-white/10 rounded-full flex items-center justify-center text-white text-xl border-2 border-accent">
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="contact-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
-                        <div>
-                            <h4 class="text-xl mb-1">Email</h4>
-                            <p class="text-white/80">hello@akko.design</p>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>hello@akko.design</p>
                         </div>
                     </div>
 
-                    <div class="flex items-center gap-5">
-                        <div class="w-14 h-14 bg-white/10 rounded-full flex items-center justify-center text-white text-xl border-2 border-accent">
+                    <div class="contact-method">
+                        <div class="contact-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
-                        <div>
-                            <h4 class="text-xl mb-1">Location</h4>
-                            <p class="text-white/80">Tokyo, Japan</p>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Tokyo, Japan</p>
                         </div>
                     </div>
 
-                    <div class="flex items-center gap-5">
-                        <div class="w-14 h-14 bg-white/10 rounded-full flex items-center justify-center text-white text-xl border-2 border-accent">
+                    <div class="contact-method">
+                        <div class="contact-icon">
                             <i class="fas fa-phone"></i>
                         </div>
-                        <div>
-                            <h4 class="text-xl mb-1">Phone</h4>
-                            <p class="text-white/80">+81 90-1234-5678</p>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+81 90-1234-5678</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="fade-in delay-1 bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                <form id="contactForm" class="space-y-6">
-                    <div>
-                        <label for="name" class="block font-semibold mb-2 text-white">Name</label>
-                        <input id="name" type="text" required class="w-full p-4 bg-white/10 border border-white/20 rounded-xl text-white focus:border-accent focus:ring-2 focus:ring-accent/30">
+            <div class="contact-form fade-in delay-1">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input id="name" required type="text">
                     </div>
-                    <div>
-                        <label for="email" class="block font-semibold mb-2 text-white">Email</label>
-                        <input id="email" type="email" required class="w-full p-4 bg-white/10 border border-white/20 rounded-xl text-white focus:border-accent focus:ring-2 focus:ring-accent/30">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input id="email" required type="email">
                     </div>
-                    <div>
-                        <label for="subject" class="block font-semibold mb-2 text-white">Subject</label>
-                        <input id="subject" type="text" required class="w-full p-4 bg-white/10 border border-white/20 rounded-xl text-white focus:border-accent focus:ring-2 focus:ring-accent/30">
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input id="subject" required type="text">
                     </div>
-                    <div>
-                        <label for="message" class="block font-semibold mb-2 text-white">Message</label>
-                        <textarea id="message" required class="w-full h-40 p-4 bg-white/10 border border-white/20 rounded-xl text-white focus:border-accent focus:ring-2 focus:ring-accent/30"></textarea>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" required></textarea>
                     </div>
-                    <button type="submit" class="bg-accent text-text px-10 py-4 rounded-full font-semibold transition-all duration-300 border-2 border-white hover:bg-white hover:text-primary hover:-translate-y-1 hover:shadow-lg">
-                        Send Message
-                    </button>
+                    <button class="submit-btn" type="submit">Send Message</button>
                 </form>
+            </div>
+
+            <div class="video-modal" id="videoModal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <div class="video-container">
+                        <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen frameborder="0"
+                                height="100%" id="videoFrame"
+                                src=""
+                                width="100%"></iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Footer -->
-<footer class="bg-primary text-white py-8 text-center border-t-4 border-accent">
-    <div class="flex justify-center gap-5 mb-6">
-        <a href="https://web.facebook.com/work.julias" class="w-11 h-11 bg-white/10 rounded-full flex items-center justify-center text-white text-lg border border-accent transition-all duration-300 hover:bg-accent hover:text-primary hover:-translate-y-1">
-            <i class="fab fa-facebook"></i>
-        </a>
-        <a href="https://www.instagram.com/rou_wnffldktm/" class="w-11 h-11 bg-white/10 rounded-full flex items-center justify-center text-white text-lg border border-accent transition-all duration-300 hover:bg-accent hover:text-primary hover:-translate-y-1">
-            <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://github.com/wnffldktm" class="w-11 h-11 bg-white/10 rounded-full flex items-center justify-center text-white text-lg border border-accent transition-all duration-300 hover:bg-accent hover:text-primary hover:-translate-y-1">
-            <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.youtube.com/@wnffldktm" class="w-11 h-11 bg-white/10 rounded-full flex items-center justify-center text-white text-lg border border-accent transition-all duration-300 hover:bg-accent hover:text-primary hover:-translate-y-1">
-            <i class="fab fa-youtube"></i>
-        </a>
-        <a href="https://discordapp.com/users/430217687445274624" class="w-11 h-11 bg-white/10 rounded-full flex items-center justify-center text-white text-lg border border-accent transition-all duration-300 hover:bg-accent hover:text-primary hover:-translate-y-1">
-            <i class="fab fa-discord"></i>
-        </a>
+<footer>
+    <div class="social-links">
+        <a href="https://web.facebook.com/work.julias"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/rou_wnffldktm/"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/wnffldktm"><i class="fab fa-github"></i></a>
+        <a href="https://www.youtube.com/@wnffldktm"><i class="fab fa-youtube"></i></a>
+        <a href="https://discordapp.com/users/430217687445274624"><i class="fab fa-discord"></i></a>
     </div>
-    <p class="opacity-70 text-sm">© 2025 Akko. All rights reserved.</p>
+    <p class="copyright">© 2025 Akko. All rights reserved.</p>
 </footer>
-
-<!-- Video Modal -->
-<div id="videoModal" class="video-modal fixed top-0 left-0 w-full h-full bg-black/90 z-[2000] hidden justify-center items-center">
-    <div class="modal-content relative w-[90%] max-w-4xl max-h-[90vh]">
-        <span class="close-btn absolute top-[-40px] right-0 text-white text-4xl font-bold cursor-pointer transition-colors hover:text-accent">&times;</span>
-        <div class="video-container relative pb-[56.25%] h-0 overflow-hidden">
-            <iframe id="videoFrame" class="absolute top-0 left-0 w-full h-full" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen frameborder="0"></iframe>
-        </div>
-    </div>
-</div>
 
 <script src="script.js"></script>
 </body>
