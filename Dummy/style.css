@@ -1,0 +1,164 @@
+/* ======= Header Styles ======= */
+.header-announcement-bar-wrapper {
+    position: relative;
+}
+
+.header-skip-link {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    z-index: 9999;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+}
+
+.header-skip-link:focus {
+    top: 0;
+}
+
+.header-border {
+    border-bottom: 1px solid #eaeaea;
+}
+
+.header-dropshadow {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.header-title-text a {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+
+.header-nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav-item {
+    margin: 0 15px;
+}
+
+.header-nav-item a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+/* ======= Burger Menu Styles ======= */
+.header-burger-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.burger-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 14px;
+}
+
+.top-bun, .patty, .bottom-bun {
+    height: 1px;
+    background-color: #000;
+    transition: all 0.3s ease;
+}
+
+/* ======= Fluid Engine Grid Styles ======= */
+.fe-block {
+    margin-bottom: 20px;
+}
+
+.fe-6771a284211f977b90f5bb46,
+.fe-6771a284211f977b90f5bb53,
+.fe-6771a284211f977b90f5bb5a,
+.fe-6771a284211f977b90f5bb6a,
+.fe-6771a284211f977b90f5bb6f,
+.fe-6771a284211f977b90f5bb73 {
+    display: grid;
+    position: relative;
+    grid-area: 1/1/-1/-1;
+    grid-template-rows: repeat(auto-fill, minmax(24px, auto));
+    grid-template-columns: minmax(var(--grid-gutter), 1fr) repeat(8, minmax(0, var(--cell-max-width))) minmax(var(--grid-gutter), 1fr);
+    row-gap: 11.0px;
+    column-gap: 11.0px;
+}
+
+/* ======= Block Specific Styles ======= */
+.fe-block-1f949252f0bb5f08e918,
+.fe-block-bd31b6045ed86065b071,
+.fe-block-f0c887d7773235338074 {
+    /* Individual block styles */
+}
+
+/* ======= Image Overlay Styles ======= */
+.fluidImageOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+    opacity: 1;
+}
+
+/* ======= Form Styles ======= */
+.form-wrapper {
+    /* Form container styles */
+}
+
+.form-inner-wrapper {
+    /* Form inner container styles */
+}
+
+/* ======= Button Styles ======= */
+.sqs-block-button-element {
+    /* Button element styles */
+}
+
+/* ======= Responsive Styles ======= */
+@media (min-width: 768px) {
+    /* Header adjustments */
+    .header-inner {
+        padding: 30px 0;
+    }
+
+    .header-title-text a {
+        font-size: 28px;
+    }
+
+    .header-nav-item {
+        margin: 0 20px;
+    }
+
+    /* Fluid grid adjustments */
+    .fe-6771a284211f977b90f5bb46,
+    .fe-6771a284211f977b90f5bb53,
+    .fe-6771a284211f977b90f5bb5a,
+    .fe-6771a284211f977b90f5bb6a,
+    .fe-6771a284211f977b90f5bb6f,
+    .fe-6771a284211f977b90f5bb73 {
+        --grid-gutter: calc(var(--sqs-site-gutter, 4vw) - 11.0px);
+        --cell-max-width: calc((var(--sqs-site-max-width, 1500px) - (11.0px * (24 - 1))) / 24);
+        --inset-padding: 0vw;
+        --row-height-scaling-factor: 0.0215;
+        --container-width: min(var(--sqs-site-max-width, 1500px), calc(100vw - var(--sqs-site-gutter, 4vw) * 2 - var(--inset-padding)));
+
+        grid-template-rows: repeat(auto-fill, minmax(calc(var(--container-width) * var(--row-height-scaling-factor)), auto);
+        grid-template-columns: minmax(var(--grid-gutter), 1fr) repeat(24, minmax(0, var(--cell-max-width))) minmax(var(--grid-gutter), 1fr);
+    }
+}

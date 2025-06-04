@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="14139303-ac55-4515-8537-42b5f1d48f45" name="Changes" comment="Fully update hopefully run good :)" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;wnffldktm&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/wnffldktm/wnffldktm.github.io.git&quot;,
+    &quot;accountId&quot;: &quot;bf6459f8-5545-4ec4-a453-8d548dff6343&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2xobCQegZiNFPpoQggsse1FdddG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.index.html (1).executor": "Run",
+    "JavaScript Debug.index.html.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/roujeong/WebstormProjects/wnffldktm.github.io/.idea",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.idea" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/wnffldktm.github.io/.idea/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.26574.96" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="14139303-ac55-4515-8537-42b5f1d48f45" name="Changes" comment="" />
+      <created>1748607245233</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1748607245233</updated>
+      <workItem from="1748607246883" duration="537000" />
+      <workItem from="1748608021032" duration="12699000" />
+    </task>
+    <task id="LOCAL-00001" summary="Update">
+      <option name="closed" value="true" />
+      <created>1748608641024</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1748608641024</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Testing href and src on footer">
+      <option name="closed" value="true" />
+      <created>1748609351683</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1748609351683</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Testing href and src on footer">
+      <option name="closed" value="true" />
+      <created>1748609959842</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1748609959842</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Updating some branch etc I've no idea.">
+      <option name="closed" value="true" />
+      <created>1748610477956</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1748610477956</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Updating some branch etc I've no idea.">
+      <option name="closed" value="true" />
+      <created>1748610563058</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1748610563058</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Testing corrected script">
+      <option name="closed" value="true" />
+      <created>1748611056101</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1748611056101</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Adding photos.">
+      <option name="closed" value="true" />
+      <created>1748611921075</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1748611921075</updated>
+    </task>
+    <task id="LOCAL-00008" summary=".">
+      <option name="closed" value="true" />
+      <created>1748612990092</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1748612990092</updated>
+    </task>
+    <task id="LOCAL-00009" summary=".">
+      <option name="closed" value="true" />
+      <created>1748615740111</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1748615740111</updated>
+    </task>
+    <task id="LOCAL-00010" summary=".js">
+      <option name="closed" value="true" />
+      <created>1748616961068</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1748616961068</updated>
+    </task>
+    <task id="LOCAL-00011" summary=".js and .css">
+      <option name="closed" value="true" />
+      <created>1748619177280</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1748619177280</updated>
+    </task>
+    <task id="LOCAL-00012" summary=".js and .css">
+      <option name="closed" value="true" />
+      <created>1748619912993</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1748619912993</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Fixing style.css">
+      <option name="closed" value="true" />
+      <created>1748620320757</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1748620320757</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Dummy style and script done.">
+      <option name="closed" value="true" />
+      <created>1748621775402</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1748621775402</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Adding service-worker.js function.">
+      <option name="closed" value="true" />
+      <created>1748622908902</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1748622908902</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Add service-worker.js directory.">
+      <option name="closed" value="true" />
+      <created>1748622956543</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1748622956543</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Modify script.js to cache dynamic elements.">
+      <option name="closed" value="true" />
+      <created>1748622980111</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1748622980111</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Fixing main html file and script file.">
+      <option name="closed" value="true" />
+      <created>1748624078818</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1748624078818</updated>
+    </task>
+    <task id="LOCAL-00019" summary=":)">
+      <option name="closed" value="true" />
+      <created>1748625914038</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1748625914038</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Fully update hopefully run good :)">
+      <option name="closed" value="true" />
+      <created>1748628612693</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1748628612693</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Fully update hopefully run good :)">
+      <option name="closed" value="true" />
+      <created>1748629633240</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1748629633241</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update" />
+    <MESSAGE value="Testing href and src on footer" />
+    <MESSAGE value="Updating some branch etc I've no idea." />
+    <MESSAGE value="Testing corrected script" />
+    <MESSAGE value="Adding photos." />
+    <MESSAGE value="." />
+    <MESSAGE value=".js" />
+    <MESSAGE value=".js and .css" />
+    <MESSAGE value="Fixing style.css" />
+    <MESSAGE value="Dummy style and script done." />
+    <MESSAGE value="Adding service-worker.js function." />
+    <MESSAGE value="Add service-worker.js directory." />
+    <MESSAGE value="Modify script.js to cache dynamic elements." />
+    <MESSAGE value="Fixing main html file and script file." />
+    <MESSAGE value=":)" />
+    <MESSAGE value="Fully update hopefully run good :)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fully update hopefully run good :)" />
+  </component>
+</project>
